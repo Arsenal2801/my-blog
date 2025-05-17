@@ -1,0 +1,38 @@
+---
+/** Props:
+ * - title (string)
+ * - subtitle (string)
+ * - backgroundImage (string) opcional
+ */
+const { title, subtitle, backgroundImage } = Astro.props;
+---
+
+<section class="hero" style={`background-image: url(${backgroundImage || '/default-hero.jpg'})`}>
+  <div class="hero-content">
+    <h1>{title}</h1>
+    <p>{subtitle}</p>
+  </div>
+</section>
+
+<style>
+  .hero {
+    padding: 5rem 1rem;
+    color: white;
+    text-align: center;
+    background-size: cover;
+    background-position: center;
+    border-radius: 0 0 1.5rem 1.5rem;
+    box-shadow: inset 0 0 0 1000px rgba(0,0,0,0.4);
+  }
+  .hero-content {
+    max-width: 700px;
+    margin: 0 auto;
+  }
+  h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+  }
+  p {
+    font-size: 1.5rem;
+  }
+</style>

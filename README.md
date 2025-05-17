@@ -1,48 +1,50 @@
-# Astro Starter Kit: Basics
+# Proyecto Portfolio Personal - Salvador Campos
 
-```sh
-npm create astro@latest -- --template basics
-```
+## Descripción
 
-[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/withastro/astro/tree/latest/examples/basics)
-[![Open with CodeSandbox](https://assets.codesandbox.io/github/button-edit-lime.svg)](https://codesandbox.io/p/sandbox/github/withastro/astro/tree/latest/examples/basics)
-[![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/withastro/astro?devcontainer_path=.devcontainer/basics/devcontainer.json)
+Este proyecto es mi portfolio personal construido con [Astro](https://astro.build/) y [Notion](https://www.notion.so/) como CMS. Su propósito es mostrar mi experiencia, habilidades y proyectos destacados de manera rápida, moderna y accesible.
 
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
+El sitio está diseñado para aprovechar la potencia de Astro para crear sitios estáticos optimizados y la flexibilidad de Notion para gestionar el contenido de forma sencilla sin necesidad de backend complejo.
 
-![just-the-basics](https://github.com/withastro/astro/assets/2244813/a0a5533c-a856-4198-8470-2d67b1d7c554)
+---
 
-## 🚀 Project Structure
+## Características principales
 
-Inside of your Astro project, you'll see the following folders and files:
+- **Integración con Notion:** Contenido dinámico gestionado desde Notion, incluyendo páginas de presentación, proyectos y sobre mí.
+- **Componentes personalizados:** Renderizado de bloques Notion (titulares, párrafos, listas, imágenes) en Astro.
+- **Diseño moderno y responsivo:** Interfaz limpia que se adapta a dispositivos móviles y escritorio.
+- **Soporte para varios tipos de contenido:** Textos, imágenes y listas.
+- **Fácil extensión:** Arquitectura preparada para agregar nuevas secciones o funcionalidades.
 
-```text
-/
-├── public/
-│   └── favicon.svg
-├── src/
-│   ├── layouts/
-│   │   └── Layout.astro
-│   └── pages/
-│       └── index.astro
-└── package.json
-```
+---
 
-To learn more about the folder structure of an Astro project, refer to [our guide on project structure](https://docs.astro.build/en/basics/project-structure/).
+## Tecnologías usadas
 
-## 🧞 Commands
+- Astro
+- Notion API
+- JavaScript/TypeScript
+- CSS personalizado (sin frameworks como Tailwind)
 
-All commands are run from the root of the project, from a terminal:
+---
 
-| Command                   | Action                                           |
-| :------------------------ | :----------------------------------------------- |
-| `npm install`             | Installs dependencies                            |
-| `npm run dev`             | Starts local dev server at `localhost:4321`      |
-| `npm run build`           | Build your production site to `./dist/`          |
-| `npm run preview`         | Preview your build locally, before deploying     |
-| `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
-| `npm run astro -- --help` | Get help using the Astro CLI                     |
+## Cómo usarlo
 
-## 👀 Want to learn more?
+1. Clona el repositorio.
+2. Configura tus claves API de Notion.
+3. Modifica el contenido desde Notion.
+4. Corre `npm install` y luego `npm run dev` para levantar el servidor de desarrollo.
+5. Despliega el sitio estático generado en tu plataforma favorita (Vercel, Netlify, etc).
 
-Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
+---
+
+## Contacto
+
+Para dudas, propuestas o colaboraciones, puedes contactarme en:
+
+- Email: salvadorcampos@example.com  
+- GitHub: [Arsenal2801](https://github.com/Arsenal2801)
+
+---
+
+¡Gracias por visitar mi portfolio!
+

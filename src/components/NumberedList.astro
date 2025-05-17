@@ -1,0 +1,17 @@
+---
+const { items } = Astro.props;
+---
+
+<ol class="numbered-list">
+  {items.map(item => <li>{item}</li>)}
+</ol>
+
+<style>
+  .numbered-list {
+    padding-left: 1.5rem;
+    margin: 1rem 0;
+  }
+  .numbered-list li {
+    margin-bottom: 0.5rem;
+  }
+</style>

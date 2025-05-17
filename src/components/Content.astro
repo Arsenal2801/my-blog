@@ -1,0 +1,43 @@
+---
+import Heading1 from './Heading1.astro';
+import Heading2 from './Heading2.astro';
+import Paragraph from './Paragraph.astro';
+import BulletedList from './BulletedList.astro';
+import NumberedList from './NumberedList.astro';
+import ImageBlock from './ImageBlock.astro';
+import Heading3 from './Heading3.astro';
+
+
+import { formatBlock } from '../utils/util'; // Ajusta la ruta si es necesario
+
+const { blocks } = Astro.props;
+
+// Procesamos y filtramos para evitar bloques nulos o indefinidos
+const formattedBlocks = blocks.map(formatBlock).filter(Boolean);
+---
+
+<div class="notion-content">
+  {formattedBlocks.length === 0 && <p>No hay bloques para mostrar.</p>}
+  {formattedBlocks.map(block => {
+    const { id, type } = block;
+
+    switch (type) {
+      case 'heading_1':
+        return <Heading1 key={id} text={block.text} />;
+      case 'heading_2':
+        return <Heading2 key={id} text={block.text} />;
+      case 'heading_3':
+        return <Heading3 key={id} text={block.text} />;
+      case 'paragraph':
+        return <Paragraph key={id} text={block.text} />;
+      case 'bulleted_list_item':
+        return <BulletedList key={id} items={[block.text]} />;
+      case 'numbered_list_item':
+        return <NumberedList key={id} items={[block.text]} />;
+      case 'image':
+        return <ImageBlock key={id} url={block.url} caption={block.caption} />;
+      default:
+        return <p key={id}>Bloque no soportado: {type}</p>;
+    }
+  })}
+</div>

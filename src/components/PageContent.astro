@@ -1,0 +1,16 @@
+---
+import Hero from '../components/Hero.astro';
+import Content from '../components/Content.astro';
+
+import { getContentByPage, getPageContent } from '../lib/notion.js';
+import { formatNotionPage } from '../utils/util';
+
+const { slug } = Astro.props;
+
+const page = await getContentByPage(slug);
+const { id, title, description, backgroundImage } = formatNotionPage(page);
+const blocks = await getPageContent(id);
+---
+
+<Hero title={title} subtitle={description} backgroundImage={backgroundImage} />
+<Content blocks={blocks} />
